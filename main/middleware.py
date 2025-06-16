@@ -19,7 +19,8 @@ class DiscordNotificationMiddleware:
         message = f"@everyone New visit on michel.dev from {ip}"
         requests.post(webhook_url, json={"content": message})
         
-    def send_discord_notification2(self):
+    def send_discord_notification2(self, request):
         webhook_url = config('WEBHOOK_URL')
+        ip = request.META.get('REMOTE_ADDR', 'unknown IP')
         message = f"@everyone New visit on michel.dev from instagram !"
         requests.post(webhook_url, json={"content": message})
