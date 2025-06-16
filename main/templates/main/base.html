@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" sizes='192x192' href="{% static 'images/Devi!-logo.svg' %}">
+    <script>
+        if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN")) {
+            window.location.href = "https://michel.dev/?open_browser=true";
+            }
+    </script>
 
     <title>Michel.Dev</title>
 </head>

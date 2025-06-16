@@ -1,4 +1,5 @@
 import requests
+from decouple import config
 
 class DiscordNotificationMiddleware:
     def __init__(self, get_response):
@@ -11,7 +12,19 @@ class DiscordNotificationMiddleware:
         return response
 
     def send_discord_notification(self, request):
-        webhook_url = 'https://discord.com/api/webhooks/1381693946006212849/0bkKdB4x-xnksBsfvbJn9ZC9ZEeZ8YpJOeY66DAwr6AY4yOMjjaDJtELKn1GK1VBDpWx'
+        webhook_url = config('WEBHOOK_URL')
         ip = request.META.get('REMOTE_ADDR', 'unknown IP')
-        message = f"@everyone New visit on michel.dev from {ip}"
-        requests.post(webhook_url, json={"content": message})
+        referrer = request.META.get('HTTP_REFERER', 'unknown referrer')
+        user_agent = request.META.get('HTTP_USER_AGENT', 'unknown user agent')
+
+        message = (
+            f"@everyone New visit on michel.dev\n"
+            f"IP: {ip}\n"
+            f"Referrer: {referrer}\n"
+            f"User-Agent: {user_agent}"
+        )
+
+        try:
+            requests.post(webhook_url, json={"content": message})
+        except Exception as e:
+            print(f"Discord webhook failed: {e}")
