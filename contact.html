@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" translate="no">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" sizes='192x192' href="assets/images/Devi!-logo.svg">
+
+    <title>Michel.Dev</title>
+</head>
+<body> 
+
+    <input type="checkbox" id="menu-toggle" hidden>
+
+    <nav class="navbar">
+        <span class="logo-name"><h2 id="michel">Michel.</h2><h2 id="h">!</h2><h2 id="l">></h2><h2 id="EV">EV</h2></span>
+
+        
+        <label for="menu-toggle" class="menu-icon-label">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#004183" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </label>
+
+
+    </nav>
+            <div class="menu">
+        <a href="index.html" hx-trigger="click" hx-target="body" hx-get="index.html" hx-push-url="index.html"><h3 class="home">Home</h3></a>
+        <a href="about.html" hx-trigger="click" hx-target="body" hx-get="about.html" hx-push-url="about.html"><h3 class="about">About</h3></a>
+        <a href="projects_and_skills.html" hx-trigger="click" hx-target="body" hx-get="projects_and_skills.html" hx-push-url="projects_and_skills.html"><h3 class="skills-and-projects">Skills&Projects</h3></a>
+        <a href="contact.html" hx-trigger="click" hx-target="body" hx-get="contact.html" hx-push-url="contact.html"><h3 class="contact">Contact</h3></a>
+        </div>
+
+    <div class="title-container"><h1 class="curly-braces">{</h1><h1 class="title">Let's talk!</h1><h1 class="curly-braces">}</h1></div>
+
+<!-- contact/contact.html -->
+<div class="contact-box">
+<h1>Contact Me via G-mail</h1>
+
+<form method="POST" class="form-class">
+  
+  <div class="form-group">
+    <input type="email" name="email" id="id_email" class="input-class" required placeholder="G-mail">
+  </div>
+  
+  <div class="form-group">
+    <input name="message" id="id_message" class="textarea-class" required placeholder="Type your message here..."></input>
+  </div>
+  
+  <button type="submit" class="btn-class">Send</button>
+</form>
+
+
+    
+
+
+</div>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    emailjs.init("1G8ekho08UyIFz5Gx");
+    </script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

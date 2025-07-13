@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" translate="no">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" sizes='192x192' href="assets/images/Devi!-logo.svg">
+
+    <title>Michel.Dev</title>
+</head>
+<body> 
+
+    <input type="checkbox" id="menu-toggle" hidden>
+
+    <nav class="navbar">
+        <span class="logo-name"><h2 id="michel">Michel.</h2><h2 id="h">!</h2><h2 id="l">></h2><h2 id="EV">EV</h2></span>
+
+        
+        <label for="menu-toggle" class="menu-icon-label">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#004183" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </label>
+
+
+    </nav>
+            <div class="menu">
+        <a href="index.html" hx-trigger="click" hx-target="body" hx-get="index.html" hx-push-url="index.html"><h3 class="home">Home</h3></a>
+        <a href="about.html" hx-trigger="click" hx-target="body" hx-get="about.html" hx-push-url="about.html"><h3 class="about">About</h3></a>
+        <a href="projects_and_skills.html" hx-trigger="click" hx-target="body" hx-get="projects_and_skills.html" hx-push-url="projects_and_skills.html"><h3 class="skills-and-projects">Skills&Projects</h3></a>
+        <a href="contact.html" hx-trigger="click" hx-target="body" hx-get="contact.html" hx-push-url="contact.html"><h3 class="contact">Contact</h3></a>
+        </div>
+
+    <div class="title-container1"><h1 class="curly-braces">{</h1><h1 class="title">some tools and technologies I've used</h1><h1 class="curly-braces">}</h1></div>
+
+<div class="skills-section">
+    <span class="portal-circles"></span><div class="skills-container">
+
+  <div class="skills-track" id="skillsTrack">
+      <div class="skill-icon">
+        <img src="assets/images/icons8-python-48.png" alt="python">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-selenium-48.png" alt="selenium">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-html5-48.png" alt="html">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-css3-48.png" alt="css">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-django-24.png" alt="django">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/htmx-logo-png_seeklogo-554504-removebg-preview.png" alt="htmx">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-figma-48.png" alt="figma">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/download-removebg-preview.png" alt="beautifulsoup">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-git-branch-64.png" alt="git">
+      </div>
+      <div class="skill-icon">
+        <img src="assets/images/icons8-javascript-48.png" alt="js">
+      </div>
+  </div>
+
+    </div><span class="portal-circles"></span>
+</div>
+
+<div class="title-container" style="top: 18rem;"><h1 class="curly-braces">{</h1><h1 class="title">projects</h1><h1 class="curly-braces">}</h1></div>
+
+<div class="projects-section">
+    <!-- syr to doll github actions project -->
+    <a href="https://github.com/Deviicho/USD_SYR_price_sender" target="_blank" rel="noopner noreferrer"><div class="project-box">
+      <img id="project-image" src="assets/images/projects-thumbnail.png">
+      <h3 id="project-name">syr-pound price sender</h3>
+    </div></a>
+    <!-- the todo app project -->
+    <a href="https://devi-cho-todoapp.onrender.com" target="_blank" rel="noopner noreferrer"><div class="project-box">
+      <img id="project-image" src="assets/images/projects-thumbnail.png">
+      <h3 id="project-name">first django web (5mon+ ago)</h3>
+    </div></a>
+  
+</div>
+
+
+<script>
+  const track = document.getElementById('skillsTrack');
+  const parent = track.parentNode;
+  const clone = track.cloneNode(true);
+  parent.appendChild(clone);
+</script>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

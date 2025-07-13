@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" sizes='192x192' href="assets/images/Devi!-logo.svg">
+
+    <title>Michel.Dev</title>
+</head>
+<body> 
+
+    <input type="checkbox" id="menu-toggle" hidden>
+
+    <nav class="navbar">
+        <span class="logo-name"><h2 id="michel">Michel.</h2><h2 id="h">!</h2><h2 id="l">></h2><h2 id="EV">EV</h2></span>
+
+        
+        <label for="menu-toggle" class="menu-icon-label">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#004183" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </label>
+
+
+    </nav>
+            <div class="menu">
+        <a href="index.html" hx-trigger="click" hx-target="body" hx-get="index.html" hx-push-url="index.html"><h3 class="home">Home</h3></a>
+        <a href="about.html" hx-trigger="click" hx-target="body" hx-get="about.html" hx-push-url="about.html"><h3 class="about">About</h3></a>
+        <a href="projects_and_skills.html" hx-trigger="click" hx-target="body" hx-get="projects_and_skills.html" hx-push-url="projects_and_skills.html"><h3 class="skills-and-projects">Skills&Projects</h3></a>
+        <a href="contact.html" hx-trigger="click" hx-target="body" hx-get="contact.html" hx-push-url="contact.html"><h3 class="contact">Contact</h3></a>
+        </div>
+
+    <div class="title-container"><h1 class="curly-braces">{</h1><h1 class="title">About Me</h1><h1 class="curly-braces">}</h1></div>
+
+<div class="about-section">
+
+    <div class="about-top-bar">
+        <div class="three-points">
+            <div id="green-circle"></div>
+            <div id="yellow-circle"></div>
+            <div id="red-circle"></div>
+        </div>
+    </div>
+
+    <p class="about-speech">
+I'm a self-taught developer who got started at 14, beginning with Python.
+Since then, I've been driven by a desire
+to build high-quality digital experiences and constantly improve my skills.
+I've learned everything on my own through
+free resources, personal projects, and consistent hard work.
+I value discipline and doing things the right way not just the easy way.
+i have a deep passion for learning. Whether it's coding, languages, or personal development
+I stay committed to growth and long-term success.
+
+If you believe in quality over shortcuts, we're aligned ;) .
+    </p>
+</div>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
